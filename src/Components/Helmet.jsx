@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useEffect } from 'react'
-
+ 
 const Helmet = props => {
 
     document.title = 'Yolo - ' + props.title
