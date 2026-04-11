@@ -1,6 +1,6 @@
 import Helmet from "../Components/Helmet";
 import HeroSlider from '../Components/HomeSlider';
-
+ 
 import heroSliderData from "../assets/fake-data/hero-slider";
 
 import Section, { SectionTitle, SectionBody } from "../Components/Section";
