@@ -1,0 +1,21 @@
+// @import './variables';
+// @use './variables' as v;
+// @use './base' as *; // only if using it globally
+
+// @forward './variables'; 
+@use './variables';
+// @forward './mixins';
+@use './mixins';
+// @forward './base';
+@use './base';
+
+// If you want _base.scss to use global variables without namespace:
+// @use './base' as *; (NOT RECOMMEDNED) it clashes variables
+
+@use './components/header';
+@use './components/footer';
+@use './components/hero-slider';
+@use './components/button';
+@use './components/section';
+@use './components/policy-card';
+@use './components/product-card';

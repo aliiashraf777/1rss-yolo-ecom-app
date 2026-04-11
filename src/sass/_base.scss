@@ -1,0 +1,104 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+html {
+    font-size: 13px;
+}
+
+body {
+    font-family: 'Robot', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: v.$main-color;
+}
+
+img {
+    max-width: 100%;
+}
+
+@each $color, $val in v.$colors {
+    .color-#{$color} {
+        color: $val;
+    }
+
+    .bg-#{$color} {
+        background-color: $val;
+    }
+}
+
+@each $val in v.$numbers {
+    .grid-col-#{$val} {
+        grid-template-columns: repeat($val, 1fr);
+    }
+}
+
+@each $val in v.$numbers {
+    .grid-col-md-#{$val} {
+        @include m.tablet {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+@each $val in v.$numbers {
+    .grid-col-sm-#{$val} {
+        @include m.mobile {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1620px;
+    padding: 0 50px;
+    margin: auto;
+
+    @include m.tablet {
+        padding: 0 20px;
+    }
+
+    @include m.mobile {
+        padding: 0 10px;
+    }
+}
+
+.main {
+    margin-top: v.$header-height;
+    margin-bottom: 2rem;
+    min-height: 100vh;
+
+    @include m.tablet {
+        margin-top: calc(#{v.$header-tablet-height} + 20px);
+    }
+
+    @include m.mobile {
+        margin-top: calc(#{v.$header-mobile-height} + 10px);
+    }
+}
+
+.grid {
+    display: grid;
+}
