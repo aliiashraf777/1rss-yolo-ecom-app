@@ -7,7 +7,7 @@ import Product from '../pages/Product';
 
 const AppRoutes = () => {
     return (
-        <Routes>
+        <Routes> 
             <Route path='/' element={<Home />} />
             <Route path='/catalog/:slug' element={<Product />} />
             <Route path='/catalog' element={<Catalog />} />
