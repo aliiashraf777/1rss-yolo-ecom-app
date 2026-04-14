@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/images/logo-2.png';
+import logo from '../assets/images/Logo-2.png';
 import { useEffect, useRef } from 'react';
  
 const mainNav = [
